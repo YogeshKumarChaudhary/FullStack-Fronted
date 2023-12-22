@@ -15,7 +15,9 @@ const Navbar = () => {
   };
   return (
     <div className="flex justify-between items-center px-5 py-6 bg-gray-200 ">
-      <div className="font-bold text-blue-800">Logo</div>
+      <div className="font-bold text-blue-800">
+        <NavLink to="/">Mern</NavLink>
+      </div>
       <div className={`${toggle ? "hidden md:block" : "w-full"}`}>
         <ul
           className={`${
@@ -51,7 +53,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="md:hidden" onClick={handlToggle}>
-        <FiAlignLeft className="text-3xl text-blue-800" />
+        <FiAlignLeft className="text-3xl text-blue-800 cursor-pointer" />
       </div>
     </div>
   );
