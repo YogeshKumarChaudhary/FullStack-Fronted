@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [userData, setUserData] = useState("");
-  const [service, setServices] = useState([]);
+  const [data, setData] = useState([]);
 
   const storeTokenInLocal = (token) => {
     setToken(token)
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
       if (!res) {
         console.log("Services not Found ourservices");
       }
-      setServices(res.data.response);
+      setData(res.data.response);
     } catch (error) {
       console.log("Our Services Error", error);
     }
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
         LogOutUser,
         isLoggedIn,
         userData,
-        service,
+        data,
       }}
     >
       {children}

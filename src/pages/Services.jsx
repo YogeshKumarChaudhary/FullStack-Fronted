@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 import { useAuth } from "../store/Auth";
 
 const Services = () => {
-  const { service } = useAuth();
+  const { data } = useAuth();
   return (
     <div className="flex flex-wrap justify-center gap-4 p-7">
-      {service ? (
-        service.map((item, i) => {
+      {data ? (
+        data.map((item, i) => {
           return (
             <div
               key={i}
