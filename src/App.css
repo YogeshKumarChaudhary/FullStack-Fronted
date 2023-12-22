@@ -1,0 +1,22 @@
+.toastBody {
+  font-size: 1rem;
+}
+
+.toggleNav {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  background-color: rgb(239 239 239 / 95%);
+  color: rgb(61, 61, 133);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-block: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  z-index: 11;
+}
+.toggleNav li {
+  margin-top: 5px;
+}
