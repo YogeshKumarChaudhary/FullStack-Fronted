@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth } from "../store/Auth";
 import { FiAlignLeft } from "react-icons/fi";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center px-5 py-6 bg-gray-200 ">
       <div className="font-bold text-blue-800">
-        <NavLink to="/">Mern</NavLink>
+        <Link to="/">Mern</Link>
       </div>
       <div className={`${toggle ? "hidden md:block" : "w-full"}`}>
         <ul
@@ -25,28 +25,28 @@ const Navbar = () => {
           }`}
         >
           <li onClick={handlChnage}>
-            <NavLink to="/">Home</NavLink>
+            <Link to="/">Home</Link>
           </li>
           <li onClick={handlChnage}>
-            <NavLink to="/about">About</NavLink>
+            <Link to="/about">About</Link>
           </li>
           <li onClick={handlChnage}>
-            <NavLink to="/contact">Contact</NavLink>
+            <Link to="/contact">Contact</Link>
           </li>
           <li onClick={handlChnage}>
-            <NavLink to="/services">Services</NavLink>
+            <Link to="/services">Services</Link>
           </li>
           {isLoggedIn ? (
             <li onClick={handlChnage}>
-              <NavLink to="/logout">LogOut</NavLink>
+              <Link to="/logout">LogOut</Link>
             </li>
           ) : (
             <>
               <li onClick={handlChnage}>
-                <NavLink to="/login">LogIn</NavLink>
+                <Link to="/login">LogIn</Link>
               </li>
               <li onClick={handlChnage}>
-                <NavLink to="/register">Register</NavLink>
+                <Link to="/register">Register</Link>
               </li>
             </>
           )}

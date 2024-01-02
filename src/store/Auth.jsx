@@ -7,6 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [userData, setUserData] = useState("");
   const [data, setData] = useState([]);
+  const authorizationToken = `Bearer ${token}`;
 
   const storeTokenInLocal = (token) => {
     setToken(token);
@@ -22,14 +23,12 @@ export const AuthProvider = ({ children }) => {
 
   const userAuthentication = async () => {
     try {
-      const res = await axios.get(
-        "https://fullstack-backend-nwj1.onrender.com/api/auth/user",
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      // http://localhost:5000/api/auth/user
+      const res = await axios.get("https://fullstack-backend-nwj1.onrender.com/api/auth/user", {
+        headers: {
+          Authorization: authorizationToken,
+        },
+      });
       if (res.status === 200) {
         const data = res.data;
         // console.log("Data form auth", data);
@@ -42,9 +41,7 @@ export const AuthProvider = ({ children }) => {
 
   const ourServices = async () => {
     try {
-      const res = await axios.get(
-        "https://fullstack-backend-nwj1.onrender.com/api/data/service"
-      );
+      const res = await axios.get("https://fullstack-backend-nwj1.onrender.com/api/data/service");
       if (!res) {
         console.log("Services not Found ourservices");
       }
@@ -66,6 +63,7 @@ export const AuthProvider = ({ children }) => {
         isLoggedIn,
         userData,
         data,
+        authorizationToken,
       }}
     >
       {children}

@@ -1,5 +1,5 @@
 import Analytics from "../components/Analytics";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -20,16 +20,16 @@ const Home = () => {
               tailored to meet your unique needs.
             </p>
             <div className="mt-6">
-              <NavLink to="/contact">
+              <Link to="/contact">
                 <button className="bg-blue-500 text-white px-6 py-3 rounded-full mr-4">
                   Connect Now
                 </button>
-              </NavLink>
-              <NavLink to="/services">
+              </Link>
+              <Link to="/services">
                 <button className="bg-gray-300 text-gray-700 px-6 py-3 rounded-full">
                   Learn More
                 </button>
-              </NavLink>
+              </Link>
             </div>
           </div>
 
@@ -67,16 +67,16 @@ const Home = () => {
               the digital age.
             </p>
             <div className="mt-6">
-              <NavLink to="/contact">
+              <Link to="/contact">
                 <button className="bg-blue-500 text-white px-6 py-3 rounded-full mr-4">
                   Connect Now
                 </button>
-              </NavLink>
-              <NavLink to="/services">
+              </Link>
+              <Link to="/services">
                 <button className="bg-gray-300 text-gray-700 px-6 py-3 rounded-full">
                   Learn More
                 </button>
-              </NavLink>
+              </Link>
             </div>
           </div>
         </section>

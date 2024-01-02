@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
   return (
@@ -11,18 +11,18 @@ const PageNotFound = () => {
           The page you are looking for might doesn't exitst.
         </p>
         <div className="mt-5 flex justify-center gap-4">
-          <NavLink
+          <Link
             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
             to="/"
           >
             Return Home
-          </NavLink>
-          <NavLink
+          </Link>
+          <Link
             className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
             to="/contact"
           >
             Report Problem
-          </NavLink>
+          </Link>
         </div>
       </div>
     </div>
