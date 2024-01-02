@@ -37,9 +37,14 @@ const Navbar = () => {
             <Link to="/services">Services</Link>
           </li>
           {isLoggedIn ? (
-            <li onClick={handlChnage}>
-              <Link to="/logout">LogOut</Link>
-            </li>
+            <>
+              <li onClick={handlChnage}>
+                <Link to="/logout">LogOut</Link>
+              </li>
+              <li onClick={handlChnage}>
+                <Link to="/admin">Admin</Link>
+              </li>
+            </>
           ) : (
             <>
               <li onClick={handlChnage}>
