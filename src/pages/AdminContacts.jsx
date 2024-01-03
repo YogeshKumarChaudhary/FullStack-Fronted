@@ -50,7 +50,7 @@ const AdminContacts = () => {
         <p className="mb-2 sm:mb-0 sm:w-1/4">UserName</p>
         <p className="mb-2 sm:mb-0 sm:w-1/4">Email</p>
         <p className="mb-2 sm:mb-0 sm:w-1/4">Message</p>
-        <p className="mb-2 sm:mb-0 sm:w-1/12">Update</p>
+        {/* <p className="mb-2 sm:mb-0 sm:w-1/12">Update</p> */}
         <p className="sm:w-1/12">Delete</p>
       </div>
       {contact ? (
@@ -62,9 +62,9 @@ const AdminContacts = () => {
             <p className="mb-2 sm:mb-0 sm:w-1/4">{data.username}</p>
             <p className="mb-2 sm:mb-0 sm:w-1/4">{data.email}</p>
             <p className="mb-2 sm:mb-0 sm:w-1/4">{data.message}</p>
-            <button className="w-full sm:w-1/12 p-1.5 bg-green-500 rounded-sm text-white font-bold">
+            {/* <button className="w-full sm:w-1/12 p-1.5 bg-green-500 rounded-sm text-white font-bold">
               Edit
-            </button>
+            </button> */}
             <button
               className="w-full sm:w-1/12 p-1.5 bg-red-500 rounded-sm text-white font-bold"
               onClick={() => deleteContact(data._id)}
