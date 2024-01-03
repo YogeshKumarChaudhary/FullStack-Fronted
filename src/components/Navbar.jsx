@@ -25,10 +25,10 @@ const Navbar = () => {
           }`}
         >
           <li onClick={handlChnage}>
-            <Link to="/admin">Admin</Link>
+            <Link to="/">Home</Link>
           </li>
           <li onClick={handlChnage}>
-            <Link to="/">Home</Link>
+            <Link to="/admin">Admin</Link>
           </li>
           <li onClick={handlChnage}>
             <Link to="/about">About</Link>
