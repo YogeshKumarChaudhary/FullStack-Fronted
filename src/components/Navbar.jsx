@@ -27,9 +27,9 @@ const Navbar = () => {
           <li onClick={handlChnage}>
             <Link to="/">Home</Link>
           </li>
-          <li onClick={handlChnage}>
+          {/* <li onClick={handlChnage}>
             <Link to="/admin">Admin</Link>
-          </li>
+          </li> */}
           <li onClick={handlChnage}>
             <Link to="/about">About</Link>
           </li>
